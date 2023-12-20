@@ -1,0 +1,46 @@
+project: ES
+sequence_files:
+  file1:
+    name: ./input/sorted_R1.fastq.gz
+    base_definition:
+      - cDNA(1-150)
+  file2:
+    name: ./input/sorted_R2.fastq.gz
+    base_definition:
+      - BC(1-10)
+      - UMI(11-22)
+reference:
+  STAR_index: hg38_SIRVercc_noref_STAR2.7.9a_index
+  GTF_file: ./source_files/hg38_SIRVercc.gtf
+  additional_STAR_params: '--limitSjdbInsertNsj 2000000'
+  additional_files:
+out_dir: ./
+num_threads: 40
+mem_limit: 100
+filter_cutoffs:
+  BC_filter:
+    num_bases: 3
+    phred: 20
+  UMI_filter:
+    num_bases: 3
+    phred: 20
+barcodes:
+  barcode_num: 1
+  barcode_file: ./source_files/barcode.txt
+  automatic: no
+  BarcodeBinning: 1
+  nReadsperCell: 100
+  demultiplex: yes
+counting_opts:
+  introns: yes
+  downsampling: '0'
+  strand: 1   
+  Ham_Dist: 1
+  write_ham: yes
+  velocyto: no
+  primaryHit: yes
+  twoPass: no
+make_stats: yes
+which_Stage: Filtering
+read_layout: SE
+
