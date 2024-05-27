@@ -1,0 +1,469 @@
+STAR version=2.7.11a
+STAR compilation time,server,dir=2023-09-15T02:58:53+0000 :/opt/conda/conda-bld/star_1694746407721/work/source
+##### Command Line:
+/home/zjw/anaconda3/bin/STAR-avx2 --genomeDir /home/mxz/index/gencode_v44/gencode_v44_starsolo --readFilesIn ./100000_ES1-TES-L_L8_Q0056W0181._2.fq.gz ./100000_ES1-TES-L_L8_Q0056W0181._1.fq.gz --readFilesCommand zcat --soloType CB_UMI_Simple --soloCBstart 11 --soloCBlen 6 --soloUMIstart 17 --soloUMIlen 12 --soloFeatures Gene GeneFull SJ --outSAMattributes NH HI nM AS CR UR CB UB GX GN --runThreadN 12 ulimit -n 10000 --outSAMtype BAM SortedByCoordinate --soloBarcodeMate 1 --clip5pNbases 38 0 --sjdbGTFfile /home/mxz/index/gencode_v44/gencode.v44.annotation.gtf --outFileNamePrefix ./100000_ES1-TES-L_L8_Q0056W0181./ --outSAMattrRGline ID:100000_ES1-TES-L_L8_Q0056W0181. SM:TSS LB:Long --soloCBwhitelist /data2/xyh/zsy/kidney/process/whitelist.txt
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 ./100000_ES1-TES-L_L8_Q0056W0181./
+###### All USER parameters from Command Line:
+genomeDir                     /home/mxz/index/gencode_v44/gencode_v44_starsolo     ~RE-DEFINED
+readFilesIn                   ./100000_ES1-TES-L_L8_Q0056W0181._2.fq.gz   ./100000_ES1-TES-L_L8_Q0056W0181._1.fq.gz        ~RE-DEFINED
+readFilesCommand              zcat        ~RE-DEFINED
+soloType                      CB_UMI_Simple     ~RE-DEFINED
+soloCBstart                   11     ~RE-DEFINED
+soloCBlen                     6     ~RE-DEFINED
+soloUMIstart                  17     ~RE-DEFINED
+soloUMIlen                    12     ~RE-DEFINED
+soloFeatures                  Gene   GeneFull   SJ        ~RE-DEFINED
+outSAMattributes              NH   HI   nM   AS   CR   UR   CB   UB   GX   GN        ~RE-DEFINED
+runThreadN                    12     ~RE-DEFINED
+outSAMtype                    BAM   SortedByCoordinate        ~RE-DEFINED
+soloBarcodeMate               1     ~RE-DEFINED
+clip5pNbases                  38   0        ~RE-DEFINED
+sjdbGTFfile                   /home/mxz/index/gencode_v44/gencode.v44.annotation.gtf     ~RE-DEFINED
+outFileNamePrefix             ./100000_ES1-TES-L_L8_Q0056W0181./     ~RE-DEFINED
+outSAMattrRGline              ID:100000_ES1-TES-L_L8_Q0056W0181.   SM:TSS   LB:Long        ~RE-DEFINED
+soloCBwhitelist               /data2/xyh/zsy/kidney/process/whitelist.txt        ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        12
+genomeDir                         /home/mxz/index/gencode_v44/gencode_v44_starsolo
+readFilesIn                       ./100000_ES1-TES-L_L8_Q0056W0181._2.fq.gz   ./100000_ES1-TES-L_L8_Q0056W0181._1.fq.gz   
+readFilesCommand                  zcat   
+outFileNamePrefix                 ./100000_ES1-TES-L_L8_Q0056W0181./
+outSAMtype                        BAM   SortedByCoordinate   
+outSAMattributes                  NH   HI   nM   AS   CR   UR   CB   UB   GX   GN   
+outSAMattrRGline                  ID:100000_ES1-TES-L_L8_Q0056W0181.   SM:TSS   LB:Long   
+clip5pNbases                      38   0   
+sjdbGTFfile                       /home/mxz/index/gencode_v44/gencode.v44.annotation.gtf
+soloType                          CB_UMI_Simple
+soloCBstart                       11
+soloUMIstart                      17
+soloCBlen                         6
+soloUMIlen                        12
+soloBarcodeMate                   1
+soloCBwhitelist                   /data2/xyh/zsy/kidney/process/whitelist.txt   
+soloFeatures                      Gene   GeneFull   SJ   
+
+-------------------------------
+##### Final effective command line:
+/home/zjw/anaconda3/bin/STAR-avx2   --runThreadN 12   --genomeDir /home/mxz/index/gencode_v44/gencode_v44_starsolo   --readFilesIn ./100000_ES1-TES-L_L8_Q0056W0181._2.fq.gz   ./100000_ES1-TES-L_L8_Q0056W0181._1.fq.gz      --readFilesCommand zcat      --outFileNamePrefix ./100000_ES1-TES-L_L8_Q0056W0181./   --outSAMtype BAM   SortedByCoordinate      --outSAMattributes NH   HI   nM   AS   CR   UR   CB   UB   GX   GN      --outSAMattrRGline ID:100000_ES1-TES-L_L8_Q0056W0181.   SM:TSS   LB:Long      --clip5pNbases 38   0      --sjdbGTFfile /home/mxz/index/gencode_v44/gencode.v44.annotation.gtf   --soloType CB_UMI_Simple   --soloCBstart 11   --soloUMIstart 17   --soloCBlen 6   --soloUMIlen 12   --soloBarcodeMate 1   --soloCBwhitelist /data2/xyh/zsy/kidney/process/whitelist.txt      --soloFeatures Gene   GeneFull   SJ   
+----------------------------------------
+
+Number of fastq files for each mate = 1
+
+   Input read files for mate 1 :
+-rw-rw-r-- 1 zjw zjw 3270505 May 25 02:21 ./100000_ES1-TES-L_L8_Q0056W0181._2.fq.gz
+
+   readsCommandsFile:
+exec > "./100000_ES1-TES-L_L8_Q0056W0181./_STARtmp/tmp.fifo.read1"
+echo FILE 0
+zcat      "./100000_ES1-TES-L_L8_Q0056W0181._2.fq.gz"
+
+
+   Input read files for mate 2 :
+-rw-rw-r-- 1 zjw zjw 5600090 May 25 02:21 ./100000_ES1-TES-L_L8_Q0056W0181._1.fq.gz
+
+   readsCommandsFile:
+exec > "./100000_ES1-TES-L_L8_Q0056W0181./_STARtmp/tmp.fifo.read2"
+echo FILE 0
+zcat      "./100000_ES1-TES-L_L8_Q0056W0181._1.fq.gz"
+
+WARNING --outSAMattrRG defines a read group, therefore STAR will output RG attribute
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Number of CBs in the whitelist = 20
+May 25 02:31:48 ... Finished reading, sorting and deduplicating CB whitelist sequences.
+WARNING: --limitBAMsortRAM=0, will use genome size as RAM limit for BAM sorting
+Finished loading and checking parameters
+Reading genome generation parameters:
+### /home/xyh/mambaforge/envs/scRCAT-seq2/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 40   --genomeDir gencode_v44_starsolo   --genomeFastaFiles ./GRCh38.primary_assembly.genome.fa      --sjdbGTFfile ./gencode.v44.annotation.gtf   --sjdbOverhang 149
+### GstrandBit=32
+versionGenome                 2.7.4a     ~RE-DEFINED
+genomeType                    Full     ~RE-DEFINED
+genomeFastaFiles              ./GRCh38.primary_assembly.genome.fa        ~RE-DEFINED
+genomeSAindexNbases           14     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+genomeTransformType           None     ~RE-DEFINED
+genomeTransformVCF            -     ~RE-DEFINED
+sjdbOverhang                  149     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   ./gencode.v44.annotation.gtf     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               3258714538   25315553038        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 194
+1	chr1	248956422	0
+2	chr2	242193529	249036800
+3	chr3	198295559	491257856
+4	chr4	190214555	689700864
+5	chr5	181538259	880017408
+6	chr6	170805979	1061683200
+7	chr7	159345973	1232601088
+8	chr8	145138636	1391984640
+9	chr9	138394717	1537212416
+10	chr10	133797422	1675624448
+11	chr11	135086622	1809580032
+12	chr12	133275309	1944846336
+13	chr13	114364328	2078277632
+14	chr14	107043718	2192834560
+15	chr15	101991189	2300051456
+16	chr16	90338345	2402287616
+17	chr17	83257441	2492727296
+18	chr18	80373285	2576089088
+19	chr19	58617616	2656567296
+20	chr20	64444167	2715287552
+21	chr21	46709983	2779774976
+22	chr22	50818468	2826698752
+23	chrX	156040895	2877554688
+24	chrY	57227415	3033792512
+25	chrM	16569	3091202048
+26	GL000008.2	209709	3091464192
+27	GL000009.2	201709	3091726336
+28	GL000194.1	191469	3091988480
+29	GL000195.1	182896	3092250624
+30	GL000205.2	185591	3092512768
+31	GL000208.1	92689	3092774912
+32	GL000213.1	164239	3093037056
+33	GL000214.1	137718	3093299200
+34	GL000216.2	176608	3093561344
+35	GL000218.1	161147	3093823488
+36	GL000219.1	179198	3094085632
+37	GL000220.1	161802	3094347776
+38	GL000221.1	155397	3094609920
+39	GL000224.1	179693	3094872064
+40	GL000225.1	211173	3095134208
+41	GL000226.1	15008	3095396352
+42	KI270302.1	2274	3095658496
+43	KI270303.1	1942	3095920640
+44	KI270304.1	2165	3096182784
+45	KI270305.1	1472	3096444928
+46	KI270310.1	1201	3096707072
+47	KI270311.1	12399	3096969216
+48	KI270312.1	998	3097231360
+49	KI270315.1	2276	3097493504
+50	KI270316.1	1444	3097755648
+51	KI270317.1	37690	3098017792
+52	KI270320.1	4416	3098279936
+53	KI270322.1	21476	3098542080
+54	KI270329.1	1040	3098804224
+55	KI270330.1	1652	3099066368
+56	KI270333.1	2699	3099328512
+57	KI270334.1	1368	3099590656
+58	KI270335.1	1048	3099852800
+59	KI270336.1	1026	3100114944
+60	KI270337.1	1121	3100377088
+61	KI270338.1	1428	3100639232
+62	KI270340.1	1428	3100901376
+63	KI270362.1	3530	3101163520
+64	KI270363.1	1803	3101425664
+65	KI270364.1	2855	3101687808
+66	KI270366.1	8320	3101949952
+67	KI270371.1	2805	3102212096
+68	KI270372.1	1650	3102474240
+69	KI270373.1	1451	3102736384
+70	KI270374.1	2656	3102998528
+71	KI270375.1	2378	3103260672
+72	KI270376.1	1136	3103522816
+73	KI270378.1	1048	3103784960
+74	KI270379.1	1045	3104047104
+75	KI270381.1	1930	3104309248
+76	KI270382.1	4215	3104571392
+77	KI270383.1	1750	3104833536
+78	KI270384.1	1658	3105095680
+79	KI270385.1	990	3105357824
+80	KI270386.1	1788	3105619968
+81	KI270387.1	1537	3105882112
+82	KI270388.1	1216	3106144256
+83	KI270389.1	1298	3106406400
+84	KI270390.1	2387	3106668544
+85	KI270391.1	1484	3106930688
+86	KI270392.1	971	3107192832
+87	KI270393.1	1308	3107454976
+88	KI270394.1	970	3107717120
+89	KI270395.1	1143	3107979264
+90	KI270396.1	1880	3108241408
+91	KI270411.1	2646	3108503552
+92	KI270412.1	1179	3108765696
+93	KI270414.1	2489	3109027840
+94	KI270417.1	2043	3109289984
+95	KI270418.1	2145	3109552128
+96	KI270419.1	1029	3109814272
+97	KI270420.1	2321	3110076416
+98	KI270422.1	1445	3110338560
+99	KI270423.1	981	3110600704
+100	KI270424.1	2140	3110862848
+101	KI270425.1	1884	3111124992
+102	KI270429.1	1361	3111387136
+103	KI270435.1	92983	3111649280
+104	KI270438.1	112505	3111911424
+105	KI270442.1	392061	3112173568
+106	KI270448.1	7992	3112697856
+107	KI270465.1	1774	3112960000
+108	KI270466.1	1233	3113222144
+109	KI270467.1	3920	3113484288
+110	KI270468.1	4055	3113746432
+111	KI270507.1	5353	3114008576
+112	KI270508.1	1951	3114270720
+113	KI270509.1	2318	3114532864
+114	KI270510.1	2415	3114795008
+115	KI270511.1	8127	3115057152
+116	KI270512.1	22689	3115319296
+117	KI270515.1	6361	3115581440
+118	KI270516.1	1300	3115843584
+119	KI270517.1	3253	3116105728
+120	KI270518.1	2186	3116367872
+121	KI270519.1	138126	3116630016
+122	KI270521.1	7642	3116892160
+123	KI270522.1	5674	3117154304
+124	KI270528.1	2983	3117416448
+125	KI270529.1	1899	3117678592
+126	KI270530.1	2168	3117940736
+127	KI270538.1	91309	3118202880
+128	KI270539.1	993	3118465024
+129	KI270544.1	1202	3118727168
+130	KI270548.1	1599	3118989312
+131	KI270579.1	31033	3119251456
+132	KI270580.1	1553	3119513600
+133	KI270581.1	7046	3119775744
+134	KI270582.1	6504	3120037888
+135	KI270583.1	1400	3120300032
+136	KI270584.1	4513	3120562176
+137	KI270587.1	2969	3120824320
+138	KI270588.1	6158	3121086464
+139	KI270589.1	44474	3121348608
+140	KI270590.1	4685	3121610752
+141	KI270591.1	5796	3121872896
+142	KI270593.1	3041	3122135040
+143	KI270706.1	175055	3122397184
+144	KI270707.1	32032	3122659328
+145	KI270708.1	127682	3122921472
+146	KI270709.1	66860	3123183616
+147	KI270710.1	40176	3123445760
+148	KI270711.1	42210	3123707904
+149	KI270712.1	176043	3123970048
+150	KI270713.1	40745	3124232192
+151	KI270714.1	41717	3124494336
+152	KI270715.1	161471	3124756480
+153	KI270716.1	153799	3125018624
+154	KI270717.1	40062	3125280768
+155	KI270718.1	38054	3125542912
+156	KI270719.1	176845	3125805056
+157	KI270720.1	39050	3126067200
+158	KI270721.1	100316	3126329344
+159	KI270722.1	194050	3126591488
+160	KI270723.1	38115	3126853632
+161	KI270724.1	39555	3127115776
+162	KI270725.1	172810	3127377920
+163	KI270726.1	43739	3127640064
+164	KI270727.1	448248	3127902208
+165	KI270728.1	1872759	3128426496
+166	KI270729.1	280839	3130523648
+167	KI270730.1	112551	3131047936
+168	KI270731.1	150754	3131310080
+169	KI270732.1	41543	3131572224
+170	KI270733.1	179772	3131834368
+171	KI270734.1	165050	3132096512
+172	KI270735.1	42811	3132358656
+173	KI270736.1	181920	3132620800
+174	KI270737.1	103838	3132882944
+175	KI270738.1	99375	3133145088
+176	KI270739.1	73985	3133407232
+177	KI270740.1	37240	3133669376
+178	KI270741.1	157432	3133931520
+179	KI270742.1	186739	3134193664
+180	KI270743.1	210658	3134455808
+181	KI270744.1	168472	3134717952
+182	KI270745.1	41891	3134980096
+183	KI270746.1	66486	3135242240
+184	KI270747.1	198735	3135504384
+185	KI270748.1	93321	3135766528
+186	KI270749.1	158759	3136028672
+187	KI270750.1	148850	3136290816
+188	KI270751.1	150742	3136552960
+189	KI270752.1	27745	3136815104
+190	KI270753.1	62944	3137077248
+191	KI270754.1	40191	3137339392
+192	KI270755.1	36723	3137601536
+193	KI270756.1	79590	3137863680
+194	KI270757.1	71251	3138125824
+--sjdbOverhang = 149 taken from the generated genome
+Started loading the genome: Sat May 25 02:31:48 2024
+
+Genome: size given as a parameter = 3258714538
+SA: size given as a parameter = 25315553038
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=14  nSAi=357913940
+nGenome=3258714538;  nSAbyte=25315553038
+GstrandBit=32   SA number of indices=6137103766
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 3258714538 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 3258714538 bytes
+SA file size: 25315553038 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 25315553038 bytes
+Loading SAindex ... done: 1565873619 bytes
+Finished loading the genome: Sat May 25 02:32:05 2024
+
+Processing splice junctions database sjdbN=402430,   pGe.sjdbOverhang=149 
+alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
+May 25 02:32:06   Loaded database junctions from the generated genome /home/mxz/index/gencode_v44/gencode_v44_starsolo//sjdbList.out.tab: 402430 total junctions
+
+May 25 02:32:06 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=/home/mxz/index/gencode_v44/gencode.v44.annotation.gtf, found:
+		252835 transcripts
+		1649476 exons (non-collapsed)
+		402454 collapsed junctions
+Total junctions: 804884
+May 25 02:32:22 ..... finished GTF processing
+
+May 25 02:32:23   Finished preparing junctions
+May 25 02:32:23 ..... inserting junctions into the genome indices
+May 25 02:32:25   Finished SA search: number of new junctions=0, old junctions=402430
+May 25 02:32:25   Finished sorting SA indicesL nInd=0
+Genome size with junctions=3258714538  3138387968   120326570
+GstrandBit1=32   GstrandBit=32
+May 25 02:33:46   Finished inserting junction indices
+May 25 02:33:49   Finished SAi
+May 25 02:33:50 ..... finished inserting junctions into genome
+Loaded transcript database, nTr=252835
+Loaded exon database, nEx=1649476
+Created thread # 1
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Starting to map file # 0
+mate 1:   ./100000_ES1-TES-L_L8_Q0056W0181._2.fq.gz
+mate 2:   ./100000_ES1-TES-L_L8_Q0056W0181._1.fq.gz
+Created thread # 6
+Created thread # 7
+Created thread # 8
+Created thread # 9
+Created thread # 10
+Created thread # 11
+Thread #2 end of input stream, nextChar=-1
+Completed: thread #3
+Completed: thread #4
+Completed: thread #5
+Completed: thread #6
+Completed: thread #7
+Completed: thread #0
+Completed: thread #8
+Completed: thread #9
+Completed: thread #10
+Completed: thread #11
+BAM sorting: 20187 mapped reads
+BAM sorting bins genomic start loci:
+1	0	39005708
+2	0	156058044
+3	1	38745029
+4	1	151803127
+5	2	39410941
+6	2	101576494
+7	3	90691268
+8	3	99948829
+9	4	131123445
+10	4	181238124
+11	5	34287159
+12	5	35469503
+13	5	106971695
+14	6	43866874
+15	7	38060172
+16	7	144791282
+17	8	99230377
+18	8	135504509
+19	10	810264
+20	10	61964703
+21	10	64320895
+22	10	68896521
+23	11	6537745
+24	11	53295560
+25	11	110720134
+26	11	122978752
+27	13	70584504
+28	14	69452991
+29	15	3663492
+30	15	89639096
+31	16	16441747
+32	16	39728492
+33	16	50370060
+34	17	49488540
+35	18	5690504
+36	18	17862199
+37	18	41861184
+38	18	48965592
+39	18	54201489
+40	18	58550806
+41	20	8211319
+42	20	34142686
+43	21	39313235
+44	22	12975141
+45	22	12976834
+46	22	12977043
+47	22	103377888
+48	36	109409
+Completed: thread #2
+Completed: thread #1
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+Joined thread # 8
+Joined thread # 9
+Joined thread # 10
+Joined thread # 11
+May 25 02:34:02 ..... finished mapping
+RAM after mapping:
+VmPeak:	38607364 kB; VmSize:	35768220 kB; VmHWM:	36500044 kB; VmRSS:	33823588 kB; 
+RAM after freeing genome index memory:
+VmPeak:	38607364 kB; VmSize:	 3633556 kB; VmHWM:	36500044 kB; VmRSS:	 1980924 kB; 
+May 25 02:34:04 ..... started Solo counting
+May 25 02:34:04 ... Starting Solo post-map for SJ
+May 25 02:34:04 ... Finished allocating arrays for Solo 6.4075e-07 GiB
+May 25 02:34:04 ... Finished reading reads from Solo files nCB=18, nReadPerCBmax=10, yesWLmatch=0
+RAM for solo feature SJ
+VmPeak:	38607364 kB; VmSize:	 3633700 kB; VmHWM:	36500044 kB; VmRSS:	 1981088 kB; 
+May 25 02:34:04 ... Finished collapsing UMIs
+May 25 02:34:04 ... Solo: writing raw matrix
+Solo output directory directory created: ./100000_ES1-TES-L_L8_Q0056W0181./Solo.out/SJ//raw/
+May 25 02:34:04 ... Solo: cell filtering
+RAM after completing solo:
+VmPeak:	38607364 kB; VmSize:	 3633700 kB; VmHWM:	36500044 kB; VmRSS:	 1981088 kB; 
+May 25 02:34:04 ... Starting Solo post-map for GeneFull
+May 25 02:34:04 ... Finished allocating arrays for Solo 1.93715e-07 GiB
+May 25 02:34:04 ... Finished reading reads from Solo files nCB=15, nReadPerCBmax=3, yesWLmatch=0
+RAM for solo feature GeneFull
+VmPeak:	38607364 kB; VmSize:	 3633700 kB; VmHWM:	36500044 kB; VmRSS:	 1981088 kB; 
+May 25 02:34:04 ... Finished collapsing UMIs
+May 25 02:34:04 ... Solo: writing raw matrix
+Solo output directory directory created: ./100000_ES1-TES-L_L8_Q0056W0181./Solo.out/GeneFull//raw/
+May 25 02:34:04 ... Solo: cell filtering
+cellFiltering: simple: nUMImax=1; nUMImin=1; nCellsSimple=15
+Solo output directory directory created: ./100000_ES1-TES-L_L8_Q0056W0181./Solo.out/GeneFull/filtered/
+RAM after completing solo:
+VmPeak:	38607364 kB; VmSize:	 3634160 kB; VmHWM:	36500044 kB; VmRSS:	 1981288 kB; 
+May 25 02:34:04 ... Starting Solo post-map for Gene
+May 25 02:34:04 ... Allocated and initialized readInfo array, nReadsInput = 74477
+May 25 02:34:04 ... Finished allocating arrays for Solo 8.9407e-08 GiB
+May 25 02:34:04 ... Finished reading reads from Solo files nCB=6, nReadPerCBmax=2, yesWLmatch=0
+RAM for solo feature Gene
+VmPeak:	38607364 kB; VmSize:	 3635332 kB; VmHWM:	36500044 kB; VmRSS:	 1982344 kB; 
+May 25 02:34:04 ... Finished collapsing UMIs
+May 25 02:34:04 ... Solo: writing raw matrix
+Solo output directory directory created: ./100000_ES1-TES-L_L8_Q0056W0181./Solo.out/Gene//raw/
+May 25 02:34:04 ... Solo: cell filtering
+cellFiltering: simple: nUMImax=1; nUMImin=1; nCellsSimple=6
+Solo output directory directory created: ./100000_ES1-TES-L_L8_Q0056W0181./Solo.out/Gene/filtered/
+RAM after completing solo:
+VmPeak:	38607364 kB; VmSize:	 3635576 kB; VmHWM:	36500044 kB; VmRSS:	 1982608 kB; 
+May 25 02:34:04 ..... finished Solo counting
+May 25 02:34:04 ..... started sorting BAM
+Max memory needed for sorting = 493501
+ALL DONE!

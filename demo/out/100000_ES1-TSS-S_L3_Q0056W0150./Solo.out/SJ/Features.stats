@@ -1,0 +1,11 @@
+                                        noUnmapped             16
+                                       noNoFeature              7
+                                      MultiFeature              3
+                       subMultiFeatureMultiGenomic              3
+                                noTooManyWLmatches              0
+                              noMMtoWLwithoutExact              0
+                                        yesWLmatch             35
+                                yessubWLmatchExact             32
+                       yessubWLmatch_UniqueFeature             35
+                                   yesCellBarcodes             14
+                                           yesUMIs             35

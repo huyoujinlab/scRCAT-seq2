@@ -1,0 +1,16 @@
+[package]
+name = "gzp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bio = "*"
+gzp = { version = "*", default-features = false, features = ["deflate_rust"] }
+flate2 = "*"
+clap = { version = "3.0.14", features = ["derive"] }
+threadpool = "*"
+regex = "*"
+strsim = "*"
+crossbeam = "*"
